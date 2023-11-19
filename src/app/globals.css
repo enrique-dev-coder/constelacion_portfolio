@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.st0_elipse {
+  stroke: #0a1f8f;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.st0_letter {
+  stroke: #0a1f8f;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
