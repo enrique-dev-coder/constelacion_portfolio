@@ -1,19 +1,19 @@
-"use client";
-import * as React from "react";
-import { motion } from "framer-motion";
+'use client';
+import * as React from 'react';
+import { motion } from 'framer-motion';
 
 const icon = {
   hidden: {
     opacity: 0,
     pathLength: 0,
     // fill: "rgba(214,201,227,0)",
-    fill: "rgba(10,31,143,0)",
+    fill: 'rgba(10,31,143,0)',
   },
   visible: {
     opacity: 1,
     pathLength: 1,
     // fill: "rgba(214,201,227,.5)",
-    fill: "rgba(10,31,143,1)",
+    fill: 'rgba(10,31,143,1)',
   },
 };
 const MotionPath = ({ d }: { d: string }) => {
@@ -25,7 +25,7 @@ const MotionPath = ({ d }: { d: string }) => {
       initial="hidden"
       animate="visible"
       transition={{
-        default: { duration: 2, ease: "easeInOut" },
+        default: { duration: 2, ease: 'easeInOut' },
         fill: { duration: 4, ease: [1, 0, 1, 1] },
       }}
     ></motion.path>
