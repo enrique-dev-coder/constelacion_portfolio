@@ -1,12 +1,12 @@
-'use client';
-import React from 'react';
-import kidden from '../../public/assets/KIDDEN.webp';
-import RTF from '../../public/assets/RTF.png';
-import TDW from '../../public/assets/tdw.png';
-import TUCSA from '../../public/assets/tucsa.png';
-import SOLE from '../../public/assets/sole.png';
-import { motion } from 'framer-motion';
-import Image, { StaticImageData } from 'next/image';
+"use client";
+import React, { useState, useEffect } from "react";
+import kidden from "../../public/assets/KIDDEN.webp";
+import RTF from "../../public/assets/RTF.png";
+import TDW from "../../public/assets/tdw.png";
+import TUCSA from "../../public/assets/tucsa.png";
+import SOLE from "../../public/assets/sole.png";
+import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 
 export type ImageMap = {
   [key: string]: {
@@ -17,39 +17,45 @@ export type ImageMap = {
   };
 };
 
-const MotionImage = motion(Image);
-
-export type ImageKeys = 'kidden' | 'RTF' | 'TDW' | 'TUCSA' | 'SOLE';
+export type ImageKeys = "kidden" | "RTF" | "TDW" | "TUCSA" | "SOLE";
 
 const Data: ImageMap = {
   kidden: {
     id: 1,
-    name: 'kidden',
+    name: "kidden",
     img: kidden,
-    className: 'bg-pink-950',
+    className: "bg-pink-950",
   },
   RTF: {
     id: 2,
-    name: 'Road to fit',
+    name: "Road to fit",
     img: RTF,
-    className: 'bg-black rounded-full',
+    className: "bg-black rounded-full",
   },
   TDW: {
     id: 3,
-    name: 'The Dutch Way',
+    name: "The Dutch Way",
     img: TDW,
-    className: 'bg-orange-400 rounded-full ',
+    className: "bg-orange-400 rounded-full ",
   },
   TUCSA: {
     id: 4,
-    name: 'TUCSA',
+    name: "TUCSA",
     img: TUCSA,
-    className: 'bg-blue-950  rounded-md ',
+    className: "bg-blue-950  rounded-md ",
   },
-  SOLE: { id: 5, name: 'SOLE', img: SOLE, className: 'bg-white rounded-2xl ' },
+  SOLE: { id: 5, name: "SOLE", img: SOLE, className: "bg-white rounded-2xl " },
 };
 
 const ImageRow = ({ images }: { images: ImageKeys[] }) => {
+  const [showImg, setShowImg] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowImg(true);
+    }, 3000);
+  }, []);
+
   const ImageItem = ({
     img,
     alt,
@@ -61,15 +67,11 @@ const ImageRow = ({ images }: { images: ImageKeys[] }) => {
   }) => {
     return (
       <div className=" my-12 w-[200px] mx-12   flex justify-center items-center ">
-        <MotionImage
-          initial={{ opacity: 0, y: '50%' }}
-          animate={{ opacity: 0.8, y: 0 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-          }}
+        <Image
           alt={alt}
-          className={`${className} w-[80%]  opacity-80 `}
+          className={`${className} w-[80%]  
+          transition-all  ease-linear duration-1000
+          ${!showImg ? "opacity-0" : "opacity-80"}  `}
           src={img}
         />
       </div>
@@ -78,10 +80,10 @@ const ImageRow = ({ images }: { images: ImageKeys[] }) => {
 
   return (
     <div className="flex  whitespace-nowrap">
-      {images.map((item) => (
+      {images.map((item, i) => (
         <ImageItem
           className={Data[item].className}
-          key={Data[item].id}
+          key={`${Data[item].id + i}`}
           img={Data[item].img}
           alt={Data[item].name}
         />
@@ -90,4 +92,77 @@ const ImageRow = ({ images }: { images: ImageKeys[] }) => {
   );
 };
 
-export default ImageRow;
+const ImageRowSection = () => {
+  return (
+    <div className="absolute top-0 z-0">
+      <ImageRow
+        images={[
+          "kidden",
+          "RTF",
+          "SOLE",
+          "TDW",
+          "TUCSA",
+          "kidden",
+          "RTF",
+          "TUCSA",
+        ]}
+      />
+      <ImageRow
+        images={[
+          "TUCSA",
+
+          "TDW",
+          "kidden",
+          "SOLE",
+          "kidden",
+          "RTF",
+
+          "TDW",
+          "TUCSA",
+        ]}
+      />
+      <ImageRow
+        images={[
+          "SOLE",
+          "TUCSA",
+          "TDW",
+          "kidden",
+          "RTF",
+          "TUCSA",
+          "RTF",
+          "TUCSA",
+          "SOLE",
+        ]}
+      />
+      <ImageRow
+        images={[
+          "kidden",
+          "RTF",
+          "SOLE",
+          "TDW",
+          "TUCSA",
+          "kidden",
+          "RTF",
+          "TUCSA",
+          "SOLE",
+        ]}
+      />
+      <ImageRow
+        images={[
+          "TUCSA",
+
+          "TDW",
+          "kidden",
+          "SOLE",
+          "kidden",
+          "RTF",
+
+          "TDW",
+          "TUCSA",
+        ]}
+      />
+    </div>
+  );
+};
+
+export default ImageRowSection;

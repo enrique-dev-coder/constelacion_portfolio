@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         blueStrong: "#485CDC",
+        blueMain: "#0a1f8f",
         purpleStrong: "#5300AB",
         purpleSoft: "#D6C9E3",
         pinkBright: "#F05571",
