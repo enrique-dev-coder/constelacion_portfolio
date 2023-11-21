@@ -66,12 +66,14 @@ const ImageRow = ({ images }: { images: ImageKeys[] }) => {
     className?: string;
   }) => {
     return (
-      <div className=" my-12 w-[200px] mx-12   flex justify-center items-center ">
+      <div
+        className={`my-12 w-[200px] mx-12   flex justify-center items-center ease-linear duration-1000
+      ${!showImg ? "opacity-0" : "opacity-80"}`}
+      >
         <Image
           alt={alt}
           className={`${className} w-[80%]  
-          transition-all  ease-linear duration-1000
-          ${!showImg ? "opacity-0" : "opacity-80"}  `}
+          transition-all    `}
           src={img}
         />
       </div>
