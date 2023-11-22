@@ -10,7 +10,7 @@ const WorkCardTDW = () => {
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 1 }}
+      transition={{ duration: 0.5 }}
       className=" bg-orange-100 max-w-[840px] my-10 mx-auto md:w-[80%] flex"
     >
       <div className=" w-1/2">
