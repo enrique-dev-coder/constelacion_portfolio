@@ -5,7 +5,7 @@ import KiddenLogo from "../../public/assets/KIDDEN.webp";
 import KiddenPic from "../../public/assets/projects/Kidden.png";
 import KiddenInsta from "../../public/assets/projects/kiddenInsta.jpg";
 import { motion } from "framer-motion";
-
+// changed img name
 const WorkCardKidden = () => {
   return (
     <motion.div
