@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { InstaIcon, LinkIcon } from "./Icons";
 import KiddenLogo from "../../public/assets/KIDDEN.webp";
-import KiddenPic from "../../public/assets/projects/Kidden.png";
+import KiddenPic from "../../public/assets/projects/kiddenPic.png";
 import KiddenInsta from "../../public/assets/projects/kiddenInsta.jpg";
 import { motion } from "framer-motion";
 // changed img name
