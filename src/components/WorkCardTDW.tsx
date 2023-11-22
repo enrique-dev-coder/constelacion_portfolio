@@ -5,7 +5,7 @@ import TDWlogo from "../../public/assets/tdw.png";
 import TDWinsta from "../../public/assets/projects/tdw_insta.jpg";
 import { motion } from "framer-motion";
 
-const WorkCard = () => {
+const WorkCardTDW = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
@@ -66,4 +66,4 @@ const WorkCard = () => {
   );
 };
 
-export default WorkCard;
+export default WorkCardTDW;
