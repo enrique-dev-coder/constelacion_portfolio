@@ -1,7 +1,7 @@
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { InstaIcon, LinkIcon } from './Icons';
-import { motion } from 'framer-motion';
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+import { InstaIcon, LinkIcon } from "./Icons";
+import { motion } from "framer-motion";
 
 interface WorkCardProps {
   title: string;
@@ -12,8 +12,8 @@ interface WorkCardProps {
   logo: StaticImageData | string;
   celImg: StaticImageData | string;
   pcImg: StaticImageData | string;
-
   features: Array<string>;
+  cellPhoneImgRight: Boolean;
 }
 
 const WorkCard = ({
@@ -26,6 +26,7 @@ const WorkCard = ({
   webLink,
   features,
   bgColor,
+  cellPhoneImgRight = false,
 }: WorkCardProps) => {
   return (
     <motion.div
@@ -42,7 +43,11 @@ const WorkCard = ({
         </h2>
       </div>
       <div className="grid  grid-cols-8 gap-4">
-        <div className=" col-span-3 sm:col-span-8">
+        <div
+          className={`col-span-3 sm:col-span-8 ${
+            cellPhoneImgRight && "order-2"
+          } `}
+        >
           <div className=" mx-auto">
             <Image src={celImg} alt="" className="w-full h-full sm:p-2" />
           </div>
