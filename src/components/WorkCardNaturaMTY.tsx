@@ -79,7 +79,7 @@ const WorkCardNaturaMty = () => {
                   "
                   >
                     <InstaIcon className=" fill-black" width={25} />
-                    <p className=" text-xl font-semibold  text-gray-800">
+                    <p className="  font-semibold  text-gray-800">
                       @solebeaute.beautysupply
                     </p>
                   </div>
@@ -95,7 +95,7 @@ const WorkCardNaturaMty = () => {
                     hover:from-pink-300 hover:to-pink-400 transition-all duration-500"
                   >
                     <LinkIcon className=" fill-black" width={30} />
-                    <p className=" text-xl font-semibold  underline underline-offset-1 text-gray-800">
+                    <p className="  font-semibold  underline underline-offset-1 text-gray-800">
                       https://natturamty.com/
                     </p>
                   </div>

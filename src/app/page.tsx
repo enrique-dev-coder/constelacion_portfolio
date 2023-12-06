@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 import Hero from '@/components/Hero';
-import MenuButton from '@/components/MenuButton';
+import SideMenu from '@/components/SideMenu';
 import WorkCard from '@/components/WorkCardTDW';
 import WorkCardKidden from '@/components/WorkCardKidden';
 import WorkCardNaturaMty from '@/components/WorkCardNaturaMTY';
@@ -35,7 +35,7 @@ export default function Home() {
         className="overflow-x-hidden relative"
         onWheel={(e) => handleWheelSectionInit(e)}
       >
-        <MenuButton />
+        <SideMenu />
         <Hero />
         <motion.div
           className="w-full bg-violet-200 absolute z-30"
