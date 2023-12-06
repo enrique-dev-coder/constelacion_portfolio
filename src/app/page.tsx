@@ -49,9 +49,18 @@ export default function Home() {
              text-9xl font-medium my-8 py-1 border-y-2 tracking-widest uppercase  border-y-purple-900  
             bg-gradient-to-r   from-purple-800 to-fuchsia-900 
             inline-block text-transparent bg-clip-text
-            md:text-6xl sm:text-5xl "
+            md:text-6xl sm:hidden "
               >
                 Casos de {<br />} Éxito
+              </h1>
+              <h1
+                className="
+             text-4xl font-medium  p-1 border-y-2 tracking-widest uppercase  border-y-purple-900  
+            bg-gradient-to-r   from-purple-800 to-fuchsia-900 
+           text-transparent bg-clip-text
+            hidden sm:inline-block "
+              >
+                Casos de Éxito
               </h1>
             </div>
             {/*work cards*/}
