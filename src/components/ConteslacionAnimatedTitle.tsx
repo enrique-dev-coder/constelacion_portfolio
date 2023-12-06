@@ -18,7 +18,7 @@ import {
 } from './ConstelacionLetters';
 const ConteslacionAnimatedTitle = () => {
   return (
-    <div className="z-10 relative">
+    <div className="z-10 relative sm:hidden">
       <HalfCircle1 className="ml-[140px] z-10" />
       <div className="flex">
         <C className="mr-[23px] z-10  " />

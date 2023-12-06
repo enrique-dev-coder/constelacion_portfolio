@@ -31,6 +31,7 @@ const SideMenu = () => {
   const containerRef = useRef(null);
 
   return (
+    // aqui envuelves a tus componentes con el animate opne yu closed , los  que estan adentro cada uno se anima por separado solo que por css y tiempo de animacion parecen que estan todos juntos
     <motion.nav
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
