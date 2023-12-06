@@ -39,7 +39,7 @@ const WorkCard = ({
       <div
         className={` flex items-center   mt-2 mb-6 justify-center   sm:flex-col sm:mt-0`}
       >
-        <h2 className=" uppercase tracking-widest font-bold  text-7xl">
+        <h2 className=" uppercase tracking-widest font-bold  text-7xl text-purple-950">
           {title}
         </h2>
       </div>
