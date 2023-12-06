@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   C,
   O,
@@ -15,7 +15,7 @@ import {
   HalfCircle1,
   HalfCircle2,
   Acento,
-} from "./ConstelacionLetters";
+} from './ConstelacionLetters';
 const ConteslacionAnimatedTitle = () => {
   return (
     <div className="z-10 relative">

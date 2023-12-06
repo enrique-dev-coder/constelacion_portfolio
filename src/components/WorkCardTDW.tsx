@@ -1,69 +1,108 @@
-import React from "react";
-import Image from "next/image";
-import { InstaIcon, LinkIcon } from "./Icons";
-import TDWlogo from "../../public/assets/tdw.png";
-import TDWinsta from "../../public/assets/projects/tdw_insta.jpg";
-import { motion } from "framer-motion";
+import React from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { InstaIcon, LinkIcon } from './Icons';
+import { motion } from 'framer-motion';
 
-const WorkCardTDW = () => {
+interface WorkCardProps {
+  title: string;
+  instaLink: string;
+  instaName: string;
+  webLink: string;
+  bgColor: string;
+  logo: StaticImageData | string;
+  celImg: StaticImageData | string;
+  pcImg: StaticImageData | string;
+  features: Array<string>;
+  cellPhoneImgRight: Boolean;
+}
+
+const WorkCard = ({
+  title,
+  logo,
+  celImg,
+  pcImg,
+  instaLink,
+  instaName,
+  webLink,
+  features,
+  bgColor,
+  cellPhoneImgRight = false,
+}: WorkCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 1 }}
-      className=" bg-orange-100 max-w-[840px] my-10 mx-auto md:w-[80%] flex"
+      transition={{ duration: 0.5 }}
+      className={` rounded-md max-w-[1000px] my-10 p-3 mx-auto md:w-[80%] flex flex-col`}
     >
-      <div className=" w-1/2">
-        <Image
-          src={TDWinsta}
-          alt="the dutch way instagram"
-          className="w-full h-full"
-        />
+      {/*title*/}
+      <div
+        className={` flex items-center   mt-2 mb-6 justify-center   sm:flex-col sm:mt-0`}
+      >
+        <h2 className=" uppercase tracking-widest font-bold  text-7xl text-purple-950">
+          {title}
+        </h2>
       </div>
-      <div className=" w-1/2 px-4 py-1 flex flex-col justify-around">
-        {/*title*/}
-        <div className="flex items-center border-b  border-black">
-          <Image src={TDWlogo} alt="" width={100} />
-          <h2 className=" uppercase tracking-widest font-bold text-2xl">
-            The Dutch Way
-          </h2>
+      {/*content*/}
+      <div className={`grid  grid-cols-8  gap-8`}>
+        <div
+          className={`col-span-3 sm:col-span-8   rounded-3xl shadow-md p-4 bg-gradient-to-t  from-orange-400  to-orange-300 ${
+            cellPhoneImgRight && 'order-2'
+          } `}
+        >
+          <div className=" mx-auto">
+            <Image src={celImg} alt="" className="w-full h-full sm:p-2" />
+          </div>
         </div>
-        {/*features*/}
-        <ul className=" list-disc px-4 py-1 text-lg">
-          <li>Branding para profesor de cursos de holandés.</li>
-          <li>La cuenta de instagram aumento a más de 6,000 seguidores.</li>
-          <li>
-            Diseño y desarrollo de página web, optimizada para dispositivo
-            mobile.
-          </li>
-        </ul>
-        {/*insta*/}
-        <a
-          href="https://www.instagram.com/thedutch.way/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="flex items-center gap-2 my-2">
-            <InstaIcon className=" fill-black" width={25} />
-            <p className=" text-lg font-semibold">@thedutch.way</p>
+
+        <div className="col-span-5 flex flex-col justify-between sm:col-span-8">
+          <div
+            className={`shadow-md bg-gradient-to-l  from-orange-400  to-orange-300 rounded-3xl flex  justify-center items-center p-4`}
+          >
+            <Image src={pcImg} alt="" className="w-full  sm:hidden " />
           </div>
-        </a>
-        {/*web*/}
-        <a
-          href="https://thedutchways.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="flex items-center gap-2 my-2">
-            <LinkIcon className=" fill-black" width={30} />
-            <p className=" text-lg font-semibold  underline underline-offset-1">
-              https://thedutchways.com/
-            </p>
+          <div className="w-full flex order-2 h-full">
+            <div className="  flex flex-col justify-between">
+              <div className="h-full flex items-center">
+                {/*features*/}
+                <ul className=" list-disc px-8 rounded-3xl  font-medium shadow-md py-3  text-xl bg-orange-100">
+                  {features.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              {/*links container*/}
+              <div className="flex items-center  justify-between ">
+                {/*insta*/}
+                <a href={instaLink} target="_blank" rel="noopener noreferrer">
+                  <div
+                    className="flex items-center gap-2  bg-gradient-to-r  from-orange-200  to-orange-300  shadow-md   rounded-3xl p-4
+                  hover:from-orange-300 hover:to-orange-200 transition-all duration-500
+                  "
+                  >
+                    <InstaIcon className=" fill-black" width={25} />
+                    <p className=" text-xl font-semibold">@{instaName}</p>
+                  </div>
+                </a>
+                {/*web*/}
+                <a href={webLink} target="_blank" rel="noopener noreferrer">
+                  <div
+                    className="flex items-center gap-2  bg-gradient-to-r  from-orange-200  to-orange-300  shadow-md   rounded-3xl p-4
+                  hover:from-orange-300 hover:to-orange-200 transition-all duration-500"
+                  >
+                    <LinkIcon className=" fill-black" width={30} />
+                    <p className=" text-xl font-semibold  underline underline-offset-1">
+                      {webLink}
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </motion.div>
   );
 };
 
-export default WorkCardTDW;
+export default WorkCard;
