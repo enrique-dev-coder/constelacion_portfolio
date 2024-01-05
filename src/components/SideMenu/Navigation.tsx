@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { motion } from 'framer-motion';
-import { MenuItem } from './MenuItem';
+import * as React from "react";
+import { motion } from "framer-motion";
+import { MenuItem } from "./MenuItem";
 
 const variants = {
   open: {
@@ -11,12 +11,15 @@ const variants = {
   },
 };
 
-const MenuItems = ['Home', 'Contacto'];
+const MenuItems = [
+  { title: "Home", href: "https://constelaciondigital.com.mx/" },
+  { title: "Contacto", href: "https://constelaciondigital.com.mx/contacto" },
+];
 
 export const Navigation = () => (
   <motion.ul className=" fixed top-20 left-5 z-[10000]" variants={variants}>
     {MenuItems.map((item, i) => (
-      <MenuItem text={item} key={i} />
+      <MenuItem text={item.title} href={item.href} key={i} />
     ))}
   </motion.ul>
 );

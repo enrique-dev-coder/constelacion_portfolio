@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { motion } from 'framer-motion';
+import * as React from "react";
+import { motion } from "framer-motion";
 
 const variants = {
   open: {
@@ -18,7 +18,7 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ text }: { text: string }) => {
+export const MenuItem = ({ text, href }: { text: string; href: string }) => {
   return (
     <motion.li
       variants={variants}
@@ -26,7 +26,9 @@ export const MenuItem = ({ text }: { text: string }) => {
       whileTap={{ scale: 0.95 }}
       className=" text-purpleSoft text-4xl"
     >
-      {text}
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {text}
+      </a>
     </motion.li>
   );
 };
