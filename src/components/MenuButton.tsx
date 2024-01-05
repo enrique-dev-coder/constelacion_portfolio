@@ -10,7 +10,7 @@ const Path = ({ ...props }) => (
     {...props}
   />
 );
-export const MenuToggle = ({ toggle }) => {
+export const MenuToggle = ({ toggle }: { toggle: () => {} }) => {
   return (
     <div className="fixed cursor-pointer top-0 left-0 w-12 h-12 bg-blueMain overflow-hidden flex flex-col justify-center gap-1 z-50 rounded-full ml-4 mt-4">
       <button onClick={toggle}>
