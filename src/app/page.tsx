@@ -1,17 +1,17 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+"use client";
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
-import Hero from '@/components/Hero';
-import SideMenu from '@/components/SideMenu';
-import WorkCard from '@/components/WorkCardTDW';
-import WorkCardKidden from '@/components/WorkCardKidden';
-import WorkCardNaturaMty from '@/components/WorkCardNaturaMTY';
-import ContactUsBanner from '@/components/ContactUsBanner';
+import Hero from "@/components/Hero";
+import SideMenu from "@/components/SideMenu";
+import WorkCard from "@/components/WorkCardTDW";
+import WorkCardKidden from "@/components/WorkCardKidden";
+import WorkCardNaturaMty from "@/components/WorkCardNaturaMTY";
+import ContactUsBanner from "@/components/ContactUsBanner";
 // image imports
-import TDWlogo from '../../public/assets/tdw.png';
-import TDWcel from '../../public/assets/projects/TWD_cel.png';
-import TDWPC from '../../public/assets/projects/TDW_PC.png';
+import TDWlogo from "../../public/assets/tdw.png";
+import TDWcel from "../../public/assets/projects/TWD_cel.png";
+import TDWPC from "../../public/assets/projects/TDW_PC.png";
 
 export default function Home() {
   // hook used for register the scrollY value
@@ -39,7 +39,7 @@ export default function Home() {
         <Hero />
         <motion.div
           className="w-full bg-violet-200 absolute z-30"
-          initial={{ top: '100%' }}
+          initial={{ top: "100%" }}
           animate={controls}
         >
           <section className=" mx-auto py-10  ">
@@ -73,9 +73,9 @@ export default function Home() {
               instaName="thedutch.way"
               webLink="https://thedutchways.com/"
               features={[
-                'Branding para profesor de cursos de holandés.',
-                'La cuenta de instagram aumento a más de 6,000 seguidores.',
-                'Diseño y desarrollo de página web, optimizada para dispositivo mobiles.',
+                "Branding para profesor de cursos de holandés.",
+                "La cuenta de instagram aumento a más de 6,000 seguidores.",
+                "Diseño y desarrollo de página web, optimizada para dispositivos móviles.",
               ]}
               bgColor="bg-orange-400"
               cellPhoneImgRight={false}
