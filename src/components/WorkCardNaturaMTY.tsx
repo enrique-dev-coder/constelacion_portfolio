@@ -1,12 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
-import { InstaIcon, LinkIcon } from './Icons';
-import { motion } from 'framer-motion';
-import Wrapper from './WorkCardComponents/Wrapper';
-import CardTitle from './WorkCardComponents/CardTitle';
-import LinkContainer from './WorkCardComponents/LinkContainer';
-import natturaPc from '../../public/assets/projects/Nattura_PC.png';
-import natturaCel from '../../public/assets/projects/natura_cel.png';
+import React from "react";
+import Image from "next/image";
+import { InstaIcon, LinkIcon } from "./Icons";
+import { motion } from "framer-motion";
+import Wrapper from "./WorkCardComponents/Wrapper";
+import CardTitle from "./WorkCardComponents/CardTitle";
+import LinkContainer from "./WorkCardComponents/LinkContainer";
+import natturaPc from "../../public/assets/projects/Nattura_PC.png";
+import natturaCel from "../../public/assets/projects/natura_cel.png";
 
 const WorkCardNaturaMty = () => {
   return (
@@ -36,14 +36,14 @@ const WorkCardNaturaMty = () => {
                 {/*features*/}
                 <ul className=" list-disc px-8 font-semibold text-gray-800 sm:text-sm sm:px-0 sm:pl-6 sm:py-2">
                   <li>
-                    {' '}
+                    {" "}
                     Desarrollo y diseño de tienda online con mas de 200
                     productos.
                   </li>
 
                   <li>
-                    {' '}
-                    Tienda online adaptable a tamaños de dispositivos móbiles.
+                    {" "}
+                    Tienda online adaptable a tamaños de dispositivos móviles.
                   </li>
                   <li>Campañas de marketing y redes sociales.</li>
                   <li>

@@ -75,7 +75,7 @@ export default function Home() {
               features={[
                 "Branding para profesor de cursos de holandés.",
                 "La cuenta de instagram aumento a más de 6,000 seguidores.",
-                "Diseño y desarrollo de página web, optimizada para dispositivo mobiles.",
+                "Diseño y desarrollo de página web, optimizada para dispositivos móviles.",
               ]}
               bgColor="bg-orange-400"
               cellPhoneImgRight={false}

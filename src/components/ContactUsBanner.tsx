@@ -1,14 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const ContactUsBanner = () => {
   return (
-    <div className=" bg-purple-800 py-10 h-[50vh] flex flex-col justify-center md:h-auto">
-      <p className=" text-center text-purpleSoft font-medium text-8xl sm:text-4xl">
-        Quieres trabajar con nosotros?
+    <div className=" bg-violet-200  py-20 h-screen flex flex-col justify-center md:h-auto">
+      <p
+        className="w-1/2 m-auto  text-center  text-purpleSoft  text-8xl sm:text-4xl
+        bg-gradient-to-r   from-purple-700 to-fuchsia-700 
+        text-transparent bg-clip-text
+      
+      "
+      >
+        ¿Colaboramos para impulsar tu proyecto?{" "}
       </p>
       <div className="flex justify-center">
         <button
-          className="  shadow-md bg-purpleSoft text-purple-900 font-semibold  text-5xl rounded-xl px-4 py-2 my-4
+          className="  shadow-md border-2 border-purple-900 text-purple-900 font-light  text-8xl rounded-full p-6 my-4
         sm:text-2xl
         "
         >
