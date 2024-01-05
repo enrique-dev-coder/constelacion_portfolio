@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import Hero from "@/components/Hero";
-import MenuButton from "@/components/MenuButton";
+import { MenuToggle } from "@/components/MenuButton";
 import WorkCard from "@/components/WorkCardTDW";
 // image imports
 import TDWlogo from "../../public/assets/tdw.png";
@@ -31,7 +31,7 @@ export default function Home() {
       className="overflow-x-hidden relative"
       onWheel={(e) => handleWheelSectionInit(e)}
     >
-      <MenuButton />
+      <MenuToggle toggle={() => {}} />
       <Hero />
       <motion.div
         className="w-full bg-blueMain absolute z-30"
