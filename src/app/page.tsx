@@ -25,7 +25,7 @@ export default function Home() {
               <h1
                 className={`
                 ${josefin.className}
-                text-8xl font-medium mt-4  py-1   uppercase   
+                text-8xl font-medium py-4 uppercase   
                 gradient_title            
                 inline-block text-transparent bg-clip-text
                 md:text-6xl md:text-center sm:text-5xl  sm:mt-6
