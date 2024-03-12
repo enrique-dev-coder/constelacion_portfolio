@@ -26,6 +26,7 @@ export const InstaIcon = ({
     height={`${width}`}
     viewBox="0 0 18 18"
     className={`${className}`}
+    fill="pink"
   >
     <path
       fillRule="evenodd"

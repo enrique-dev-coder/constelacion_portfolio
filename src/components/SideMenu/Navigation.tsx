@@ -12,8 +12,9 @@ const variants = {
 };
 
 const MenuItems = [
-  { title: "Home", href: "https://constelaciondigital.com.mx/" },
-  { title: "Contacto", href: "https://constelaciondigital.com.mx/contacto" },
+  { title: "Home", href: "https://somosasteria.com/" },
+  { title: "Manifiesto", href: "https://somosasteria.com/manifiesto/" },
+  { title: "Contacto", href: "https://somosasteria.com/contacto/" },
 ];
 
 export const Navigation = () => (

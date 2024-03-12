@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-
-import Hero from "@/components/Hero";
 import SideMenu from "@/components/SideMenu";
 import WorkCard from "@/components/WorkCardTDW";
 import WorkCardKidden from "@/components/WorkCardKidden";
@@ -12,53 +10,26 @@ import ContactUsBanner from "@/components/ContactUsBanner";
 import TDWlogo from "../../public/assets/tdw.png";
 import TDWcel from "../../public/assets/projects/TWD_cel.png";
 import TDWPC from "../../public/assets/projects/TDW_PC.png";
+import { Josefin_Sans } from "next/font/google";
+
+const josefin = Josefin_Sans({ subsets: ["latin"] });
 
 export default function Home() {
-  // hook used for register the scrollY value
-  const [topPosition, setTopPosition] = useState(100);
-  const controls = useAnimation();
-
-  const handleWheelSectionInit = (event: React.WheelEvent) => {
-    const factor = 0.5;
-    setTopPosition((prevPosition) =>
-      Math.min(100, Math.max(0, prevPosition - event.deltaY * factor))
-    );
-  };
-
-  useEffect(() => {
-    controls.start({ top: `${topPosition}%` });
-  }, [controls, topPosition]);
-
   return (
     <>
-      <main
-        className="overflow-x-hidden relative"
-        onWheel={(e) => handleWheelSectionInit(e)}
-      >
+      <main className="overflow-x-hidden relative">
         <SideMenu />
-        <Hero />
-        <motion.div
-          className="w-full bg-violet-200 absolute z-30"
-          initial={{ top: "100%" }}
-          animate={controls}
-        >
-          <section className=" mx-auto py-10  ">
+        <motion.div>
+          <section className=" mx-auto py-10 bg-[#fafaf9]  ">
             <div className="flex  justify-center">
               <h1
-                className="
-             text-9xl font-medium my-8 py-1 border-y-2 tracking-widest uppercase  border-y-purple-900  
-            bg-gradient-to-r   from-purple-800 to-fuchsia-900 
-            inline-block text-transparent bg-clip-text
-            md:text-6xl sm:hidden "
-              >
-                Casos de {<br />} Éxito
-              </h1>
-              <h1
-                className="
-             text-4xl font-medium  p-1 border-y-2 tracking-widest uppercase  border-y-purple-900  
-            bg-gradient-to-r   from-purple-800 to-fuchsia-900 
-           text-transparent bg-clip-text
-            hidden sm:inline-block "
+                className={`
+                ${josefin.className}
+                text-8xl font-medium mt-4  py-1   uppercase   
+                gradient_title            
+                inline-block text-transparent bg-clip-text
+                md:text-6xl sm:hidden 
+                `}
               >
                 Casos de Éxito
               </h1>

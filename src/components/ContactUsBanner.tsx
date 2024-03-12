@@ -1,26 +1,30 @@
 import React from "react";
 import { InstaIcon } from "./Icons";
+import { Josefin_Sans } from "next/font/google";
+
+const josefin = Josefin_Sans({ subsets: ["latin"] });
 
 const ContactUsBanner = () => {
   return (
-    <div className=" bg-violet-200 max-w-[1200px] m-auto  py-10  h-screen flex flex-col justify-between md:h-auto">
+    <div className="  max-w-[1200px] m-auto  py-10  h-screen flex flex-col justify-between md:h-auto">
       <div className="flex flex-col   gap-y-10  h-full">
         <p
-          className=" mx-auto    text-center  text-purpleSoft  text-8xl sm:text-3xl sm:px-2
-        bg-gradient-to-r   from-blue-800 to-fuchsia-900 
-        text-transparent bg-clip-text
-      
-      "
+          className={`
+          ${josefin.className}
+          mx-auto text-center text-8xl font-medium sm:text-3xl 
+          gradient_title            
+          sm:px-2 text-transparent bg-clip-text
+          `}
         >
           ¿Colaboramos para impulsar tu proyecto?{" "}
         </p>
         <div className="flex justify-center ">
           <button
-            className="  shadow-md border-2 border-purple-900 text-purple-900 font-light  text-8xl rounded-full p-6 
+            className=" bg-[#141E88] shadow-md  text-[#F4DBDF] font-light  text-4xl rounded-full p-4 
           sm:text-2xl sm:w-full sm:p-2 sm:mx-2 sm:mb-2 sm:shadow-none"
           >
             <a
-              href="https://api.whatsapp.com/send?phone=5218442464782&text=%C2%BFColaboramos%20para%20impulsar%20tu%20proyecto%3F"
+              href="https://somosasteria.com/contacto/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -30,23 +34,23 @@ const ContactUsBanner = () => {
         </div>
       </div>
       <div className="flex justify-between sm:flex-col sm:gap-2">
-        <button className="  border-2 border-purple-900  rounded-full p-2 text-lg sm:text-xl sm:p-2 sm:mx-2">
+        <button className=" bg-[#141E88] shadow-md  text-[#F4DBDF]  rounded-full p-2 text-lg sm:text-xl sm:p-2 sm:mx-2">
           <a
-            href="https://www.instagram.com/constelacion.digital/"
+            href="https://www.instagram.com/asteria.estudiocreativo/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 sm:justify-center "
           >
             <InstaIcon className="" width={20} />
-            constelacion.digital
+            asteria.estudiocreativo
           </a>
         </button>
         <button
-          className="  border-2 border-purple-900  rounded-full p-2 flex items-center gap-2 text-lg
+          className=" bg-[#141E88] shadow-md  text-[#F4DBDF] rounded-full p-2 flex items-center gap-2 text-lg
         sm:text-xl sm:p-2 sm:mx-2"
         >
           <a
-            href="https://api.whatsapp.com/send?phone=5218442464782&text=%C2%BFColaboramos%20para%20impulsar%20tu%20proyecto%3F"
+            href="https://wa.me/8442464782"
             target="_blank"
             rel="noopener noreferrer"
             className="sm:flex  sm:justify-center sm:w-full "

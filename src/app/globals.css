@@ -28,3 +28,9 @@
   background: #0a1f8f;
   z-index: 10000;
 }
+
+.gradient_title {
+  background: -webkit-linear-gradient(#141e88, #7e22ce, #f0abfc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
