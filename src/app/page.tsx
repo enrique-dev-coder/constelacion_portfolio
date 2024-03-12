@@ -28,7 +28,7 @@ export default function Home() {
                 text-8xl font-medium mt-4  py-1   uppercase   
                 gradient_title            
                 inline-block text-transparent bg-clip-text
-                md:text-6xl sm:hidden 
+                md:text-6xl md:text-center sm:text-5xl  sm:mt-6
                 `}
               >
                 Casos de Éxito
